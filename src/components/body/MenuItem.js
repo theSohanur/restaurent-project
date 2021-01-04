@@ -7,7 +7,7 @@ const MenuItem = props => {
         <div>
             <Card>
                 <CardBody>
-                    <CardImg width="50%" alt ={props.dish.name} src = {props.dish.image} style={{opacity:0.7}} ></CardImg>
+                    <CardImg width="100%" alt ={props.dish.name} src = {props.dish.image} style={{opacity:0.7}} ></CardImg>
                     <CardImgOverlay>
                         <CardTitle>{props.dish.name}</CardTitle>
                     </CardImgOverlay>
