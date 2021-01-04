@@ -8,7 +8,8 @@ import Body from './body/Body';
 const MainComponent = () => {
     return (
         <div>
-            
+           <Header /> 
+           <Body />
         </div>
     )
 }
