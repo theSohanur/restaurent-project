@@ -5,11 +5,11 @@ const MenuItem = props => {
     console.log(props);
     return (
         <div>
-            <Card>
+            <Card style = {{margin:"10px"}}>
                 <CardBody>
-                    <CardImg width="100%" alt ={props.dish.name} src = {props.dish.image} style={{opacity:0.7}} ></CardImg>
+                    <CardImg width="100%" alt ={props.dish.name} src = {props.dish.image}></CardImg>
                     <CardImgOverlay>
-                        <CardTitle>{props.dish.name}</CardTitle>
+                        <CardTitle className="lead" style= {{cursor:"pointer",display:"block",padding:"10px 15px",backgroundColor:"rgba(255,255,255,.6)"}} onClick={props.DishSelect} >{props.dish.name}</CardTitle>
                     </CardImgOverlay>
                 </CardBody>
             </Card>
