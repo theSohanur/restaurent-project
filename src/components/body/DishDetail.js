@@ -10,14 +10,15 @@ const DishDetail = (props) => {
                 <CardBody style={{textAlign:"left"}} >
                     <CardTitle>{props.dish.name}</CardTitle>
                     <CardText>
-                        <p>{props.dish.description}</p>
-                        <p>{props.dish.price}/-</p>
+                        {props.dish.description}
+                        </CardText>
+                        <CardText>
+                        {props.dish.price}/-
 
                     </CardText>
                     <hr/>
                     <h4 style={{borderBottom:"1px solid #ddd"}}>Recent Comments</h4>
                     <LoadComments comments={props.dish.comments}/>
-                    
                 </CardBody>
             </Card>
         </div>

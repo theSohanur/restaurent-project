@@ -10,7 +10,7 @@ export class Menu extends Component {
         selectedDish:null
     }
     onDishSelect = dish =>{
-        console.log(dish);
+        // console.log(dish);
         this.setState({selectedDish:dish})
     }
 
