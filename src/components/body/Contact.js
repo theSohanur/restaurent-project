@@ -16,39 +16,56 @@ class Contact extends Component {
             Message:"",
 
         }
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleInputChange=event => {
+        const value = event.target.type ==='checkbox' ? event.target.checked: event.target.value;
+        const name = event.target.name;
+        this.setState({
+            [name]:value
+        })
+
+    }
+
+    handleSubmit = event => {
+        console.log(this.state);
+        event.preventDefault();
+    }
+
 
     render() {
         return (
             <div className="container">
-                <div className="row row-content">
-                    <div className="col-12 mt-4">
+                <div className="row row-content" style={{paddingLeft:"20px",textAlign:"left"}}>
+                    <div className="col-12 my-4">
                         <h3>Send us your Feedback</h3>
                     </div>
-                    <div className="col-12">
-                        <Form>
+                    <div className="col-12 col-m-7">
+                        <Form onSubmit={this.handleSubmit}>
                             <FormGroup row>
                                 <Label htmlFor='firstname' md={2}>First Name</Label>
                                 <Col md={10}>
-                                    <Input type='text' name='firstname' placeholder='First Name' value={this.state.firstname} />
+                                    <Input type='text' name='firstname' placeholder='First Name' value={this.state.firstname} onChange={this.handleInputChange} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Label htmlFor='Lasttname' md={2}>Last Name</Label>
                                 <Col md={10}>
-                                    <Input type='text' name='lastname' placeholder='Last Name' value={this.state.lastname} />
+                                    <Input type='text' name='lastname' placeholder='Last Name' value={this.state.lastname} onChange={this.handleInputChange} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Label htmlFor='telnum' md={2}>Contact Tel.</Label>
                                 <Col md={10}>
-                                    <Input type='text' name='telnum' placeholder='Tel. Number' value={this.state.telnum} />
+                                    <Input type='text' name='telnum' placeholder='Tel. Number' value={this.state.telnum} onChange={this.handleInputChange} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Label htmlFor='email' md={2}>E-mail</Label>
                                 <Col md={10}>
-                                    <Input type='text' name='email' placeholder='Email' value={this.state.email} />
+                                    <Input type='text' name='email' placeholder='Email' value={this.state.email} onChange={this.handleInputChange} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>

@@ -10,6 +10,7 @@ const MainComponent = () => {
         <div>
            <Header /> 
            <Body />
+           <Footer/>
         </div>
     )
 }

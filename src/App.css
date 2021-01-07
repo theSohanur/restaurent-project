@@ -2,3 +2,10 @@
   text-align: center;
 }
 
+.footer{
+  background-color: #EDEDED;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
